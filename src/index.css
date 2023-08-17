@@ -1,13 +1,212 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #afadc6;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+  background-color: white;
+  width: 500px;
+  border-radius: 30px;
+  padding: 50px;
+  height: 700px;
+  
+}
+
+.wrapper::before {
+  content: '';
+  z-index: -1;
+  display: block;
+  position: absolute;
+  background-color: #E9E7FA;
+  width: 90%;
+  height: 90%;
+  border-radius: 30px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.wrapper::after {
+  content: '';
+  z-index: -2;
+  display: block;
+  position: absolute;
+  background-color: #978DEB;
+  width: 80%;
+  height: 80%;
+  border-radius: 30px;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+
+.progress {
+  background-color: rgb(222, 222, 222);
+  border-radius: 5px;
+  width: 100%;
+  height: 10px;
+}
+
+.progress-complete {
+  border-radius: 5px;
+  width: 30%;
+  height: 10px;
+  background: linear-gradient(90deg, #25E641, #15D5FB);
+  transition: 0.5s;
+}
+
+.result {
+  text-align: center;
+}
+
+.result img {
+  width: 30%;
+
+}
+
+.result button {
+  padding: 10px;
+  background-color: #EF0067;
+  color: white;
+  font-size: 30px;
+  width: 200px;
+  border-radius: 30px;
+  border: solid 1px white;
+  font-weight: bold;
+  transition: .25s;
+  cursor: pointer;
+}
+
+.result button:hover {
+  background-color: white;
+  border: solid 1px #EF0067;
+  color: black;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.search svg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  fill: rgb(130, 130, 130);
+}
+
+.search input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 10px 50px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  height: 70px;
+}
+
+.user-info {
+  margin-left: 15px;
+
+}
+
+.user-email {
+  color: grey;
+}
+
+.user-plus {
+  height: 50%;
+  opacity: 0.4;
+  
+}
+
+.user-plus:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+  
+
+
+.button-invite {
+  padding: 10px;
+  width: 400px;
+  border-radius: 30px;
+  background-color: #FA5007;
+  border: none;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 2px 5px #FA5007;
+  position: absolute;
+  bottom: 50px;
+}
+
+.button-invite:active { 
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+
+.green-check {
+  height: 45%;  
+  display: block;
+  margin: 0 auto;
+}
+
+.invite-title {
+  text-align: center;
+  font-size: 45px;
+}
+
+.invite-text {
+  text-align: center;
+  font-size: 25px;
+
 }
